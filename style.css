@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color:#39393A;
+  --secondary-color:#FF8552;
+  --content-color:#7EA3CC;
+  --color-1:#5E1A0A;
+  --color-2:#9E6262;
+  --color-3:#A8826A;
+  --color-4:#594733;
+  --color-5:#312826;
+  --color-6:#800000;
+  --color-7:#FAF0CA;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  text-align: center;
+  
+}
+.header-section{
+  width: 100%;
+  height: 15vh;
+}
+.main-section{
+  width: 100%;
+  height: 70vh;
+  padding-top: 10px;
+}
+
+h2 {
+  color:var(--color-2);
+  padding-top: 20px;
+}
+
+.home-buttons{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2%;
+  
+}
+button {
+  padding: 10px 20px;
+  background-color: var(--color-2);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-6)
+}
+#admin{
+  visibility: hidden;
+}
+#customer{
+  visibility: hidden;
+}
+
+.panel {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel input {
+  padding: 8px;
+  margin: 10px 0;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.book-entry, .rent-entry {
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  border-left: 5px solid var(--color-2)
+}
+#customer-panel button{
+  margin-top: 10px;
+}
+.footer-section{
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+  font-size: 10px;
+  color: var(--color-2);
+  padding-top: 19px;
+ 
+}

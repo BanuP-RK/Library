@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <header class="header-section">
+  <h2>Library Management</h2>
+  </header>
+  <div class="main-section">
+  <div class="home-buttons" id="home-button">
+  <button onclick="showHome()" id="home">HOME</button><br>
+  </div>
+  <div class="home-buttons" id="home-buutons">
+    <button onclick="showAdminPanel()" id="admin">Admin Panel</button>
+    <button onclick="showCustomerPanel()" id="customer">Customer Panel</button>
+    </div>
+
+  <!-- Admin Panel -->
+  <div id="admin-panel" class="panel">
+    <h3>Admin Panel</h3>
+    <input type="number" id="book-count" placeholder="Enter number of books">
+    <button onclick="generateBookInputs()">Add Books</button>
+    <p style="color:gray;font-size: smaller;font-weight: lighter;">Note : You can add only 2 books at a time</p>
+    <div id="book-inputs"></div>
+    <button onclick="submitBooks()">Submit Books</button>
+    <button onclick="showBooks()">Show Books</button>
+    <button onclick="showHome()" >Back to Home</button>
+  </div>
+
+  <!-- Customer Panel -->
+  <div id="customer-panel" class="panel">
+    <h3>Customer Panel</h3>
+    <button onclick="showAvailableBooks()">Available books</button>
+    <button onclick="startRenting()">Rent Books</button>
+    <div id="rent-section" class="hidden">
+      <input type="number" id="rent-count" placeholder="Enter number of books to rent">
+      <button onclick="generateRentInputs()">Proceed</button>
+      <div id="rent-inputs"></div>
+      <button onclick="submitRent()">Submit Rent</button>
+    </div>
+    <button onclick="showHome()">Back to Home</button>
+  </div>
+
+  <!-- Book Display -->
+  <div id="book-list" class="panel">
+    <h3>Available Books</h3>
+    <ul id="book-display"></ul>
+    <button onclick="showHome()" >Back to Home</button>
+  </div>
+  </div>   
+        <footer class="footer-section">
+        <p>&copy; 2025 Your Library. All rights reserved.</p>
+        <h4>Contact</h4>
+      <p>Email: support@yourlibrary.com</p>
+      <p>Phone: +123-456-7890</p>
+      <p>Address: 123 Library Lane, Booktown, BK 45678</p>
+         </footer>
+    <script src="script.js"></script>
+</body>
+</html>
