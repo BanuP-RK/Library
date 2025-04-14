@@ -74,7 +74,19 @@ const books = [];
       document.getElementById('book-inputs').innerHTML = '';
       document.getElementById('book-count').value = '';
     }
-
+    function showBooks() {
+      let password = prompt(`Enter the password to show the released book details`);
+                     if(password === "admin123"){
+      const list = document.getElementById('book-display');
+      list.innerHTML = '';
+      books.forEach((book, i) => {
+        const item = document.createElement('li');
+        item.textContent = `${i + 1}. ${book.bname} by ${book.aname}, ${book.year} - ₹${book.price}`;
+        list.appendChild(item);
+      });}
+      
+      showPanel('book-list');
+    }
     function showAvailableBooks() {
      
                    
